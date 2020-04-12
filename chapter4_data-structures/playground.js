@@ -11,3 +11,12 @@ sequence.push(5);
 console.log(sequence);
 console.log(sequence.pop());
 console.log(sequence);
+
+// objects
+let day1 = {
+    squirrel: false,
+    events: ['work', 'touched tree', 'pizza', 'running']
+};
+console.log(day1.squirrel);
+day1.wolf = false;
+console.log(day1.wolf);

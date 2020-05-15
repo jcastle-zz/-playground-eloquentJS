@@ -56,17 +56,63 @@ while (number <= 12) {
     number = number + 2;
 }
 
-let result = 1;
-let counter = 0;
-while (counter < 10) {
-    result = result * 2;
-    counter = counter + 1;
-}
-console.log(result);
+// let result = 1;
+// let counter = 0;
+// while (counter < 10) {
+//     result = result * 2;
+//     counter = counter + 1;
+// }
+// console.log(result);
 
 // Will continue to loop until youName value is entered into the prompt
-let yourName;
-do {
-    yourName = prompt("Who are you?");
-} while (!yourName);
-console.log(yourName);
+// let yourName;
+// do {
+//     yourName = prompt("Who are you?");
+// } while (!yourName);
+// console.log(yourName);
+
+console.log("This is the first line. \nThis is the second.");
+
+if (false != true) {
+    console.log("That makes sense");
+    if (1 < 2) {
+        console.log("There's no surprise there");
+    }
+}
+
+// For loops
+for (let number = 0; number <= 12; number = number +2) {
+    console.log(number);
+}
+
+let result = 1;
+for (let counter = 0; counter < 10; counter = counter + 1) {
+    result = result * 2;
+}
+console.log(result)
+
+// Breaking out of a loop
+// Can do counter with ++ for counter + 1 or -- for counter - 1
+for (let current = 20; ; current = current + 1) {
+    if (current % 7 === 0) {
+        console.log(current);
+        break;
+    }
+}
+
+// Dispatching on a value with switch
+// switch(prompt("What is the weather like?")) {
+//     case "rainy":
+//         console.log("Remember to bring an umbrella");
+//         break;
+//     case "sunny":
+//         console.log("Dress lightly");
+//         break;
+//     case "cloudy":
+//         console.log("Go outside");
+//         break;
+//     default:
+//         console.log("Unknown weather type");
+//         break;
+// }
+

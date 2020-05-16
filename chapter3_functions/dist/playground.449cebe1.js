@@ -117,79 +117,48 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../../.nvm/versions/node/v10.17.0/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"playground.js":[function(require,module,exports) {
+console.log('Ch3 playground');
+/* Functions are the "bread and butter" of JavaScript programming. They provide a way to:
+1. Structure larger programs.
+2. Reduce repetition.
+3. Associate names with subprograms.
+4. Isolate subprograms from one another.
+5. Define new vocabulary.
+*/
+// A function definition can be a regular binding where the value of the binding is the function. This function has parameter 'x'. Parameters to a function behave like regular bindings, but their initial values are given by the caller of the function, not the code in the function itself.
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
+var square = function square(x) {
+  return x * x;
+};
+
+console.log(square(12));
+
+var power = function power(base, exponent) {
+  var result = 1; // loop 10 times
+
+  for (var i = 0; i < exponent; i++) {
+    result *= base;
   }
 
-  return bundleURL;
-}
+  ;
+  return result; // A return statement determines the value the function returns.
+};
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+console.log(power(2, 10)); // Calls the function.
+// Binding or variable scope - local and global. Local defined in the function by let and const, global defined outside the function or inside with var.
 
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
+var x = 10;
 
-  return '/';
-}
+if (true) {
+  var y = 20;
+  var z = 30;
+  console.log(x + y + z); // -> 60
+} // y is not visible here because if it is local scope, x & z are global, z with var.
 
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
 
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../../.nvm/versions/node/v10.17.0/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../../../../.nvm/versions/node/v10.17.0/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"base.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../.nvm/versions/node/v10.17.0/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../.nvm/versions/node/v10.17.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+console.log(x + z); // -> 40
+},{}],"../../../../.nvm/versions/node/v10.17.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +186,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64387" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54153" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -393,5 +362,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../.nvm/versions/node/v10.17.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/base.ee376513.js.map
+},{}]},{},["../../../../.nvm/versions/node/v10.17.0/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","playground.js"], null)
+//# sourceMappingURL=/playground.449cebe1.js.map

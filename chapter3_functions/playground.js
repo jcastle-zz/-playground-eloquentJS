@@ -29,9 +29,15 @@ let x = 10;
 if (true) {
     let y = 20;
     var z = 30;
-    console.log(x + y + z);
-    // -> 60
+    let q = 10;
+    console.log(x + y + z + q);
+    // -> 70
 }
 // y is not visible here because if it is local scope, x & z are global, z with var.
 console.log(x + z);
 // -> 40
+
+function sum(a, b) {
+    return a + b;
+}
+console.log(sum(2, 4));

@@ -100,6 +100,11 @@ for (let current = 20; ; current = current + 1) {
     }
 }
 
+const testFunction = (someVar) => {
+    console.log(someVar);
+};
+
+testFunction('this worked');
 // Dispatching on a value with switch
 // switch(prompt("What is the weather like?")) {
 //     case "rainy":

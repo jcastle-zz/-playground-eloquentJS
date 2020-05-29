@@ -1,0 +1,36 @@
+metrics.js:14 GitHub: 5229
+metrics.js:14 Other: 2303
+metrics.js:14 Drupal: 10
+metrics.js:14 GitLab: 28
+metrics.js:14 BitBucket: 41
+metrics.js:14 SVN: 2
+metrics.js:14 TFS: 2
+metrics.js:14 VSS: 1
+metrics.js:29 GitHub: 68.66%
+metrics.js:29 Other: 30.24%
+metrics.js:29 Drupal: 0.13%
+metrics.js:29 GitLab: 0.37%
+metrics.js:29 BitBucket: 0.54%
+metrics.js:29 SVN: 0.03%
+metrics.js:29 TFS: 0.03%
+metrics.js:29 VSS: 0.01%
+metrics.js:33 Total count for all VCS platforms: 7616
+metrics.js:48 openSource: 5466
+metrics.js:48 governmentWideReuse: 1696
+metrics.js:48 exemptByAgencySystem: 77
+metrics.js:48 exemptByLaw: 158
+metrics.js:48 exemptByPolicyDate: 33
+metrics.js:48 exemptByCIO: 82
+metrics.js:48 exemptByAgencyMission: 98
+metrics.js:48 other: 2
+metrics.js:48 exemptByNationalSecurity: 4
+metrics.js:56 Total count for all Usage Types: 7616
+metrics.js:59 openSource: 71.77%
+metrics.js:59 governmentWideReuse: 22.27%
+metrics.js:59 exemptByAgencySystem: 1.01%
+metrics.js:59 exemptByLaw: 2.07%
+metrics.js:59 exemptByPolicyDate: 0.43%
+metrics.js:59 exemptByCIO: 1.08%
+metrics.js:59 exemptByAgencyMission: 1.29%
+metrics.js:59 other: 0.03%
+metrics.js:59 exemptByNationalSecurity: 0.05%

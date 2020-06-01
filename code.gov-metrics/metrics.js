@@ -14,20 +14,26 @@ vcsSummary.forEach(function (item) {
     console.log(`${item.platform}: ${item.count}`);
 });
 
-// TODO: Have to figure out how to output to HTML page for easy copy and paste
-// const paragraph = document.querySelector('p');
-// paragraph.innerText = JSON.stringify(vcsSummary).replace(/[\[\]/{\}"]/g, "");
-// paragraph.innerText = JSON.stringify(vcsSummary, null, " ");
-
 // calculate the sum counts for all platforms
 var vcsTotal = vcsSummary.reduce(function(prev, cur) {
     return prev + cur.count;
   }, 0);
 
-// divide count for each repo by sum for all platforms to get a %
-vcsSummary.forEach(function(item) {
-    console.log(`${item.platform}: ${(item.count / vcsTotal * 100).toFixed(2) + '%'}`);
-});
+
+const output = document.querySelector('.vcs-summary-output');
+// paragraph.innerText = JSON.stringify(vcsSummary).replace(/[\[\]/{\}"]/g, "");
+// paragraph.innerText = JSON.stringify(vcsSummary, null, " ");
+
+// loop through each vcsSummary object, store platform and count values in memory, append to page in li
+vcsSummary.forEach(platform => {
+    var elm = document.createElement('li');
+    var span = document.createElement('span');
+    span.classList.add('percent-gray');
+    elm.innerHTML = `${platform.platform}: ${platform.count} `;
+    span.innerHTML = `(${(platform.count / vcsTotal * 100).toFixed(2) + '%'})`;
+    elm.appendChild(span);
+    output.appendChild(elm);
+})
 
 // Total count should be same for VCS and Usage Type
 console.log(`Total count for all VCS platforms: ${vcsTotal}`);
